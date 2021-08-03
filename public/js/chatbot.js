@@ -1,11 +1,14 @@
 
-//const axios = require('axios').default;
+const axios = require('axios').default;
 
-// const VOICEFLOW_REQUEST_HEADERS = {
-//     'Security Scheme Type': process.env.VF_APIKEY
-// }
+const VOICEFLOW_REQUEST_HEADERS = {
+    'Security Scheme Type': process.env.VF_APIKEY,
+    'Header parameter name': 'Authorization'
+}
 // from https://codepen.io/shivapandey/pen/dWdRYM
 // creds to shiva pandey for the chatbox ui
+
+
 
 $(document).ready(function() {
     var INDEX = 0;
