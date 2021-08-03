@@ -1,162 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Mentis</title>
+    <meta
+            name="description"
+            content="Unlocking your best self."
+    />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/chatbot.css" rel="stylesheet">
+    <script defer src="js/chatbot.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
 
     <!-- Icons -->
-    <link href="/assets/vendor/nucleo/css/nucleo-icons.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-    <!-- Theme CSS -->
-    <link type="text/css" href="/assets/css/argon-design-system.min.css" rel="stylesheet">
+    <script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.8.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.8.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-performance.js"></script>
     <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <style media="screen">
-        body {
-            background: #ECEFF1;
-            color: rgba(0, 0, 0, 0.87);
-            font-family: Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        #message {
-            background: white;
-            max-width: 360px;
-            margin: 100px auto 16px;
-            padding: 32px 24px;
-            border-radius: 3px;
-        }
-
-        #message h2 {
-            color: #ffa100;
-            font-weight: bold;
-            font-size: 16px;
-            margin: 0 0 8px;
-        }
-
-        #message h1 {
-            font-size: 22px;
-            font-weight: 300;
-            color: rgba(0, 0, 0, 0.6);
-            margin: 0 0 16px;
-        }
-
-        #message p {
-            line-height: 140%;
-            margin: 16px 0 24px;
-            font-size: 14px;
-        }
-
-        #message a {
-            display: block;
-            text-align: center;
-            background: #039be5;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: white;
-            padding: 16px;
-            border-radius: 4px;
-        }
-
-        #message, #message a {
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        }
-
-        #load {
-            color: rgba(0, 0, 0, 0.4);
-            text-align: center;
-            font-size: 13px;
-        }
-
-        @media (max-width: 600px) {
-            body, #message {
-                margin-top: 0;
-                background: white;
-                box-shadow: none;
-            }
-
-            body {
-                border-top: 16px solid #ffa100;
-            }
-        }
-    </style>
 </head>
 <body>
+<section id="home">
 
-<section id="landing">
-    <div id="navbar">
 
+    <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
     </div>
-    <div>
-        <div id="mentis-splash">
 
+    <div id="body">
+        <div class="chat-box">
+            <div class="chat-box-header">
+                ChatBot
+                <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+            </div>
+            <div class="chat-box-body">
+                <div class="chat-box-overlay">
+                </div>
+                <div class="chat-logs">
+
+                </div><!--chat-log -->
+            </div>
+            <div class="chat-input">
+                <form>
+                    <input type="text" id="chat-input" placeholder="Send a message..."/>
+                    <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <header id="header" class="header">
+
+        <div id="navbar">
             <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
                 <div class="container">
-
-                    <!-- Text Logo - Use this if you don't have a graphic logo -->
-                    <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
-
-                    <!-- insert photo logo when we get one
-                     <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
-
-
-                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link page-scroll active" href="#mentis-splash">HOME <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link page-scroll" href="#features">FEATURES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link page-scroll" href="#details">DETAILS</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link page-scroll" href="#pricing">PRICING</a>
-                            </li>
-                        </ul>
-                        <span class="nav-item">
-                </span>
-                    </div>
-                </div> <!-- end of container -->
+                    <a class="navbar-brand logo-text page-scroll" href="index.html">MENTIS</a>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll active" href="#mentis-splash">HOME<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#features">FEATURES</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-
-
-        </div>
-        <div id="landing-graphics">
-
-
         </div>
 
-        <svg class="header-frame" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 310"><defs><style>.cls-1{fill:#5f4def;}</style></defs><title>header-frame</title><path class="cls-1" d="M0,283.054c22.75,12.98,53.1,15.2,70.635,14.808,92.115-2.077,238.3-79.9,354.895-79.938,59.97-.019,106.17,18.059,141.58,34,47.778,21.511,47.778,21.511,90,38.938,28.418,11.731,85.344,26.169,152.992,17.971,68.127-8.255,115.933-34.963,166.492-67.393,37.467-24.032,148.6-112.008,171.753-127.963,27.951-19.26,87.771-81.155,180.71-89.341,72.016-6.343,105.479,12.388,157.434,35.467,69.73,30.976,168.93,92.28,256.514,89.405,100.992-3.315,140.276-41.7,177-64.9V0.24H0V283.054Z"></path></svg>
-    </div>
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-5">
+                        <div class="text-container">
+                            <h1>MENTIS</h1>
+                            <p>Unlock your best self</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="image-container">
+                            <div class="img-wrapper">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <svg class="header-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+         preserveAspectRatio="none"
+         viewBox="0 0 1920 310">
+        <defs>
+        </defs>
+        <path class="cls-1"
+              d="M0,283.054c22.75,12.98,53.1,15.2,70.635,14.808,92.115-2.077,238.3-79.9,354.895-79.938,59.97-.019,106.17,18.059,141.58,34,47.778,21.511,47.778,21.511,90,38.938,28.418,11.731,85.344,26.169,152.992,17.971,68.127-8.255,115.933-34.963,166.492-67.393,37.467-24.032,148.6-112.008,171.753-127.963,27.951-19.26,87.771-81.155,180.71-89.341,72.016-6.343,105.479,12.388,157.434,35.467,69.73,30.976,168.93,92.28,256.514,89.405,100.992-3.315,140.276-41.7,177-64.9V0.24H0V283.054Z"/>
+    </svg>
+
 </section>
+
+
+<!--
+from https://codepen.io/shivapandey/pen/dWdRYM
+creds to shiva pandey for the chatbox ui
+-->
 
 <section id="more-info">
     <div class="info">
@@ -169,6 +142,9 @@
 
     </div>
 </section>
+
+
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -208,6 +184,7 @@
         }
     });
 </script>
+
 
 <!-- Core -->
 <script src="/assets/vendor/jquery/jquery.min.js"></script>

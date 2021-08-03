@@ -1,0 +1,91 @@
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+}
+
+.header {
+    background-color: #707bfb;
+}
+
+.header .header-content {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.header .text-container {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.header h1 {
+    margin-bottom: 20px;
+    color: #F8F7ED;
+    font-size: 100px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.header p{
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #F8F7ED;
+}
+
+.header .btn-solid-lg {
+    margin-right: 0.5rem;
+    margin-bottom: 1.125rem;
+    margin-left: 0.5rem;
+    border-color: #f3f7fd;
+    background-color: #F8F7ED;
+    color: #707bfb;
+}
+
+.header .btn-solid-lg:hover {
+    background: transparent;
+    color: #f3f7fd;
+}
+
+.header .btn-outline-lg {
+    border-color: #f3f7fd;
+    color: #f3f7fd;
+}
+
+.header .btn-outline-lg:hover {
+    background-color: #f3f7fd;
+    color: #707bfb;
+}
+
+.header-svg {
+    margin-top: -1px; /* to remove white margin */
+    width: 100%;
+    height: 150px;
+    fill: #707bfb;
+}
+
+
+/* NAVBAR STUFF */
+.navbar {
+    align-items: flex-end;
+    margin: 30px;
+}
+
+.container .row {
+    padding: 10vh 0;
+}
