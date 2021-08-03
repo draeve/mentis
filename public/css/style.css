@@ -19,6 +19,15 @@ a {
     color: inherit;
 }
 
+/*IMPORTANT CHAT CSS*/
+.chat-body {
+    z-index: 99;
+}
+
+.chat-circle {
+    z-index: 99;
+}
+
 .header {
     background-color: #707bfb;
 }
@@ -89,3 +98,4 @@ a {
 .container .row {
     padding: 10vh 0;
 }
+

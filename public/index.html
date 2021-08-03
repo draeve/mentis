@@ -13,7 +13,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/chatbot.css" rel="stylesheet">
     <script defer src="js/chatbot.js"></script>
+    <script defer src="js/main.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Fonts -->
@@ -32,6 +34,7 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.8.1/firebase-app.js"></script>
@@ -46,11 +49,12 @@
 <section id="home">
 
 
+
     <div id="chat-circle" class="btn btn-raised">
         <div id="chat-overlay"></div>
     </div>
 
-    <div id="body">
+    <div id="chat-body">
         <div class="chat-box">
             <div class="chat-box-header">
                 ChatBot
@@ -83,7 +87,7 @@
                     <a class="navbar-brand logo-text page-scroll" href="index.html">MENTIS</a>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link page-scroll active" href="#mentis-splash">HOME<span
+                            <a class="nav-link page-scroll active" href="#home">HOME<span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
@@ -130,6 +134,7 @@
 from https://codepen.io/shivapandey/pen/dWdRYM
 creds to shiva pandey for the chatbox ui
 -->
+
 
 <section id="more-info">
     <div class="info">

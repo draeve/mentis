@@ -10,5 +10,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="animate.css" level="application" />
     <orderEntry type="library" name="sweetalert2" level="application" />
+    <orderEntry type="library" name="jquery-3.6.0" level="application" />
+    <orderEntry type="library" name="raven" level="application" />
+    <orderEntry type="library" name="all" level="application" />
+    <orderEntry type="library" name="popper.js" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="axios" level="application" />
   </component>
 </module>

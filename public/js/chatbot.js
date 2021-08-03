@@ -1,4 +1,9 @@
 
+//const axios = require('axios').default;
+
+// const VOICEFLOW_REQUEST_HEADERS = {
+//     'Security Scheme Type': process.env.VF_APIKEY
+// }
 // from https://codepen.io/shivapandey/pen/dWdRYM
 // creds to shiva pandey for the chatbox ui
 

@@ -1,0 +1,11 @@
+{
+  "name": "mental-health-chatbot",
+  "version": "1.0.0",
+  "dependencies": {
+    "browserify-shim": "^3.8.14",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1"
+  }
+}
