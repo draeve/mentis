@@ -1,16 +1,10 @@
-
-const axios = require('axios').default;
-
-const VOICEFLOW_REQUEST_HEADERS = {
-    'Security Scheme Type': process.env.VF_APIKEY,
-    'Header parameter name': 'Authorization'
-}
 // from https://codepen.io/shivapandey/pen/dWdRYM
 // creds to shiva pandey for the chatbox ui
 
 
 
 $(document).ready(function() {
+
     var INDEX = 0;
     $("#chat-submit").click(function(e) {
         e.preventDefault();
@@ -99,8 +93,12 @@ $(document).ready(function() {
     })
 
     $(".chat-box-toggle").click( () => {
-        $("#chat-circle").toggle('scale');
+                $("#chat-circle").toggle('scale');
         $(".chat-box").toggle('scale');
     })
 
+
+    generate_message("Hi there! I'm Mentis, a mental health chatbot!", 'user')
+    generate_message("I'm currently under development, so please hang tight! 😊", 'user')
+    generate_message("For now though, I'll just repeat whatever you say to me!", 'user')
 })

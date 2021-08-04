@@ -95,7 +95,16 @@ a {
     margin: 30px;
 }
 
-.container .row {
+#header-splash-container {
     padding: 10vh 0;
 }
 
+.nav-item, .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.container .row {
+    padding: 50px 0;
+}
