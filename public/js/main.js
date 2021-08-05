@@ -1,3 +1,17 @@
+
+
+function getLocalStream() {
+    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
+        window.localStream = stream; // A
+        window.localAudio.srcObject = stream; // B
+        window.localAudio.autoplay = true; // C
+    }).catch( err => {
+        console.log("u got an error:" + err)
+    });
+}
+
+getLocalStream();
+
 // // axios.<method> will now provide autocomplete and parameter typings
 // axios.get('https://localhost:3000')
 //     .then((response) => {

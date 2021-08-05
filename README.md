@@ -1,5 +1,4 @@
-# mental-health-chatbot
-queens computing challenge
+# MENTIS
+Created for the Queens Computing Challenge // Aug 2021
 
-to build, type `firebase serve`
-and to deploy it `firebase deploy`
+To view the Devpost, click (here)[]
